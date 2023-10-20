@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import React from "react";
+import "./App.css";
+import { GenericButton } from "./Componentes/genericoButton";
+import { MyText } from "./Componentes/Text";
+import { TimeSelect } from "./Componentes/setDate";
+import { DateRangeCalendarCurrentMonthCalendarPositionProp } from "./Componentes/calendar";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <GenericButton
+        className="my-button"
+        onClick={() => alert("Botão clicado")}
+        label="Log"
+      />
+      <MyText className="my-text" />
+      <TimeSelect className="select-time" />
+      <DateRangeCalendarCurrentMonthCalendarPositionProp className="calendario" />
     </div>
   );
 }
